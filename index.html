@@ -1,44 +1,451 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Samuel81.GitHub.io by samuel81</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Samuel81.GitHub.io</h1>
-      <h2 class="project-tagline"></h2>
-    </section>
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSH Cipta Mandiri</title>
+<meta name="description" content="DSH Cipta Mandiri membangun perangkat lunak pertanahan untuk Kementerian ATR/BPN dan pemerintah daerah: COSMO (jaringan CORS dan koreksi GNSS), SiPETIK (survei pemetaan tematik), dan Peta Pajak (WebGIS integrasi NIB dan NOP).">
+<meta property="og:title" content="DSH Cipta Mandiri">
+<meta property="og:description" content="Perangkat lunak pertanahan yang kami bangun sendiri: COSMO, SiPETIK, Peta Pajak.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.png" type="image/png">
+<meta property="og:image" content="https://dshcm.id/logo-full.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kertas:#F4F6F3;
+  --tinta:#0B2749;
+  --garis:#B7C3CC;
+  --garis-tipis:#D9E0E4;
+  --hijau:#1E6E4A;
+  --pita:#F26B21;
+  --lembut:#4E6273;
+  --display:"Barlow Semi Condensed","Barlow",system-ui,sans-serif;
+  --teks:"Barlow",system-ui,sans-serif;
+  --gutter:clamp(16px,4vw,32px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--kertas);color:var(--tinta);font-family:var(--teks);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pita);outline-offset:3px}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05;letter-spacing:-.01em}
+h1{font-weight:700;font-size:clamp(34px,4.6vw,56px)}
+h2{font-weight:600;font-size:clamp(28px,3.6vw,42px)}
+h3{font-weight:700;font-size:clamp(26px,3vw,36px)}
+p{margin:0}
+.lembut{color:var(--lembut)}
 
-    <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-<p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/defunkt/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/defunkt">@defunkt</a>), PJ Hyett (<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/pjhyett/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/pjhyett">@pjhyett</a>), and Tom Preston-Werner (<a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/mojombo/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/mojombo">@mojombo</a>) founded GitHub.</p>
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+/* header */
+.kop-atas{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--kertas) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--garis-tipis)}
+.kop-atas .wrap{display:flex;align-items:center;gap:20px;height:60px}
+.merek{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:19px;text-decoration:none;letter-spacing:.005em;white-space:nowrap}
+.merek img{width:34px;height:34px;flex:none}
+.nav{margin-left:auto;display:flex;gap:4px}
+.nav a{text-decoration:none;font-size:15px;font-weight:500;padding:8px 10px;border-radius:3px;color:var(--lembut)}
+.nav a:hover{color:var(--tinta);background:#fff}
+@media (max-width:640px){.merek{font-size:17px}.nav a{padding:8px 7px;font-size:14px}.nav a.sembunyi-hp{display:none}}
 
-      <footer class="site-footer">
+/* hero: lembar peta */
+.lembar{position:relative;min-height:min(86vh,820px);display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--garis)}
+.lembar>.wrap{width:100%}
+.lembar .mozaik{position:absolute;inset:0;width:100%;height:100%}
+.m-base{fill:none;stroke:var(--tinta);stroke-opacity:.5;stroke-width:1;vector-effect:non-scaling-stroke}
+.m-green{fill:var(--hijau);fill-opacity:.2;stroke:var(--hijau);stroke-opacity:.9;stroke-width:1;vector-effect:non-scaling-stroke}
+.m-orange{fill:var(--pita);fill-opacity:.92;stroke:var(--tinta);stroke-width:1;vector-effect:non-scaling-stroke}
+@media (prefers-reduced-motion:no-preference){
+  .m-orange{animation:tampil 1.1s ease .35s both}
+  @keyframes tampil{from{fill-opacity:0}to{fill-opacity:.92}}
+}
+.kop-peta{position:relative;margin:clamp(56px,10vh,120px) 0 clamp(28px,5vh,56px);max-width:600px;background:var(--kertas);border:1.5px solid var(--tinta);outline:1px solid var(--tinta);outline-offset:5px;padding:clamp(22px,3.5vw,36px) clamp(22px,3.5vw,38px)}
+.kop-peta .logo{width:clamp(150px,22vw,190px);height:auto;margin-bottom:22px}
+.kop-peta h1{max-width:17ch}
+.kop-peta .ringkas{margin-top:16px;max-width:52ch;font-size:clamp(16px,1.6vw,18px);line-height:1.55}
+.tombol{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;height:44px;padding:0 18px;border-radius:3px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--tinta)}
+.btn.utama{background:var(--tinta);color:var(--kertas)}
+.btn.utama:hover{background:#0b1d2d}
+.btn.garis:hover{background:#fff}
+.produk-daftar{display:flex;flex-wrap:wrap;gap:4px 22px;margin:22px 0 0;padding:14px 0 0;border-top:1px solid var(--garis);list-style:none;font-size:15px;color:var(--lembut)}
+.produk-daftar b{color:var(--tinta);font-weight:600}
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+/* bagian */
+.bagian{padding-block:clamp(56px,8vw,96px)}
+.bagian>.wrap>h2{max-width:22ch}
+.pengantar{margin-top:14px;max-width:62ch;font-size:clamp(17px,1.6vw,19px);color:var(--lembut)}
 
-    </section>
+/* produk */
+.produk{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(40px,6vw,72px);border-top:1px solid var(--garis-tipis)}
+.produk:first-of-type{border-top:0;padding-top:clamp(28px,4vw,48px)}
+.produk .kicker{font-weight:500;font-size:15px;color:var(--lembut);margin-bottom:8px}
+.produk .uraian{margin-top:16px;max-width:58ch}
+.produk ul{list-style:none;margin:22px 0 0;padding:0;max-width:58ch}
+.produk li{position:relative;padding-left:26px;margin-top:10px;font-size:16px;line-height:1.5}
+.produk li::before{content:"";position:absolute;left:0;top:.72em;width:14px;height:2px;background:var(--tinta)}
+.bukti{margin-top:24px;padding-left:14px;border-left:3px solid var(--pita);font-size:15px;line-height:1.5;color:var(--lembut);max-width:52ch}
+.bukti a{color:var(--tinta)}
+.plat{margin:0;justify-self:center;width:100%;max-width:440px;color:var(--tinta)}
+.plat svg{width:100%;height:auto}
+.plat .ket{margin-top:10px;font-size:13.5px;color:var(--lembut);text-align:left}
+@media (min-width:821px){.produk:nth-of-type(even) .plat{order:-1;justify-self:start}}
+@media (max-width:820px){.produk{grid-template-columns:1fr}.plat{max-width:380px;justify-self:start}}
 
-  
-  </body>
+.susunan{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px clamp(20px,3vw,40px);margin-top:12px}
+.susunan div{border-top:1px solid var(--garis);padding-top:12px}
+.susunan h4{font-family:var(--display);font-weight:600;font-size:19px;margin:0;line-height:1.2}
+.susunan p{margin-top:6px;font-size:15px;line-height:1.5;color:var(--lembut)}
+@media (max-width:980px){.susunan{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.susunan{grid-template-columns:1fr}}
+
+/* daerah */
+.daerah{columns:2;column-gap:48px;list-style:none;margin:28px 0 0;padding:0;max-width:880px}
+.daerah li{break-inside:avoid;padding:12px 0;border-top:1px solid var(--garis-tipis)}
+.daerah .nm{font-weight:600}
+.daerah a{display:block;font-size:14.5px;color:var(--lembut);text-decoration:none;word-break:break-all}
+.daerah a:hover{color:var(--tinta);text-decoration:underline}
+.daerah-catatan{margin-top:22px;font-size:15px;color:var(--lembut)}
+@media (max-width:640px){.daerah{columns:1}}
+
+/* cara kerja */
+.cara{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,48px);margin-top:36px}
+.cara div{border-top:2px solid var(--tinta);padding-top:16px}
+.cara h3{font-weight:600;font-size:24px}
+.cara p{margin-top:10px;max-width:46ch;font-size:16px}
+@media (max-width:640px){.cara{grid-template-columns:1fr}}
+
+/* tentang */
+.tentang{background:#fff;border-top:1px solid var(--garis-tipis);border-bottom:1px solid var(--garis-tipis)}
+.tentang .isi{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(28px,5vw,72px);align-items:start}
+.tentang p.besar{max-width:60ch;font-size:clamp(18px,1.8vw,21px);line-height:1.55;margin-top:18px}
+.pendiri{list-style:none;margin:0;padding:0;border-top:2px solid var(--tinta)}
+.pendiri li{padding:14px 0;border-bottom:1px solid var(--garis-tipis)}
+.pendiri .nm{font-family:var(--display);font-weight:600;font-size:22px}
+.pendiri .pr{font-size:15px;color:var(--lembut)}
+@media (max-width:720px){.tentang .isi{grid-template-columns:1fr}}
+
+/* kontak + footer */
+.kontak .baris{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:22px;font-size:17px}
+.kontak a{text-decoration:none;border-bottom:1.5px solid var(--garis);padding-bottom:2px}
+.kontak a:hover{border-color:var(--tinta)}
+footer{border-top:1px solid var(--garis);padding:28px 0 40px;font-size:14px;color:var(--lembut)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header class="kop-atas">
+  <div class="wrap">
+    <a class="merek" href="#atas" aria-label="DSH Cipta Mandiri, ke atas">
+      <img src="logo-mark.png" alt="" width="34" height="34">
+      DSH Cipta Mandiri
+    </a>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="#produk">Produk</a>
+      <a href="#daerah" class="sembunyi-hp">Pengguna</a>
+      <a href="#cara" class="sembunyi-hp">Cara kerja</a>
+      <a href="#tentang" class="sembunyi-hp">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<main id="atas">
+
+<section class="lembar" aria-label="Pembuka">
+  <svg class="mozaik" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+<path class="m-base" d="M-104,20 -95,74 -35,62 -45,10Z M-141,100 -138,136 -31,114 -33,77Z M-138,136 -131,209 -27,189 -31,114Z M-131,209 -128,238 -26,218 -27,189Z M-128,238 -127,255 -25,236 -26,218Z M-76,261 -72,296 -18,286 -24,252Z M-73,296 -70,313 -14,303 -18,286Z M-62,312 -53,375 -2,365 -14,303Z M-99,517 -97,536 10,525 7,506Z M-97,536 -88,632 24,620 10,525Z M-88,632 -85,666 29,654 24,620Z M-85,666 -84,678 31,665 29,654Z M-80,690 -37,686 -25,751 -65,756Z M-37,686 30,679 36,743 -25,751Z M-65,770 -64,784 41,770 40,755Z M-64,784 -63,808 42,796 41,770Z M-63,808 -56,908 48,902 42,796Z M-53,923 -50,949 1,946 -2,920Z M-2,920 1,946 53,943 48,918Z M-46,-65 6,-69 18,-1 -33,2Z M-33,2 18,-1 29,61 -21,62Z M6,-69 83,-75 92,-12 17,-8Z M17,-8 92,-12 102,60 29,61Z M83,-75 128,-78 137,-8 93,-6Z M93,-6 137,-8 146,59 102,60Z M-20,75 7,74 16,234 -12,236Z M7,74 63,73 76,228 16,234Z M63,73 131,72 148,221 76,228Z M131,72 147,71 165,220 148,221Z M-10,248 6,247 28,364 13,364Z M6,247 24,245 45,363 28,364Z M24,245 50,243 69,362 45,363Z M50,243 165,232 178,357 69,362Z M14,376 82,373 84,427 16,430Z M16,430 84,427 86,486 19,491Z M82,373 100,372 102,421 83,422Z M83,422 102,421 104,485 86,486Z M100,372 178,368 179,420 102,424Z M102,424 179,420 180,480 104,485Z M19,503 24,538 105,532 99,498Z M99,498 105,532 189,526 182,492Z M24,538 32,585 126,577 119,531Z M119,531 126,577 197,571 189,526Z M32,585 35,605 127,597 124,577Z M124,577 127,597 201,591 197,571Z M35,605 40,643 134,634 128,597Z M128,597 134,634 208,627 201,591Z M40,643 44,665 115,658 111,636Z M111,636 115,658 212,649 208,627Z M53,753 133,745 137,829 58,838Z M58,838 137,829 140,892 61,903Z M133,745 152,744 156,824 137,826Z M137,826 156,824 160,890 140,892Z M152,744 221,737 225,817 156,825Z M156,825 225,817 229,881 160,890Z M63,914 81,912 100,1017 82,1020Z M81,912 150,903 166,1004 100,1017Z M150,903 177,899 192,998 166,1004Z M177,899 229,892 243,988 192,998Z M146,-43 149,-22 247,-38 244,-59Z M149,-22 150,-11 249,-27 247,-38Z M150,-11 153,11 253,-5 249,-27Z M153,11 158,56 260,40 253,-5Z M160,72 163,101 209,93 206,64Z M206,64 209,93 263,84 263,55Z M163,101 166,121 222,112 221,91Z M221,91 222,112 264,105 263,84Z M166,121 167,133 213,125 212,113Z M212,113 213,125 264,117 264,105Z M167,133 172,171 223,162 220,124Z M220,124 223,162 265,156 264,117Z M172,171 174,187 215,181 214,164Z M214,164 215,181 265,173 265,156Z M174,187 177,217 217,210 215,181Z M215,181 217,210 266,202 265,173Z M180,233 182,255 225,249 222,226Z M222,226 225,249 270,241 267,219Z M182,255 185,293 232,285 228,248Z M228,248 232,285 275,278 270,241Z M185,293 191,354 243,345 236,285Z M236,285 243,345 282,339 275,278Z M193,369 193,392 233,386 232,363Z M232,363 233,386 285,378 284,354Z M193,392 195,477 236,472 233,386Z M233,386 236,472 291,465 285,378Z M195,492 216,605 317,589 295,481Z M216,605 220,628 321,611 317,589Z M220,628 223,646 325,628 321,611Z M228,659 246,656 251,721 235,723Z M246,656 324,642 322,709 251,721Z M244,893 249,923 287,922 283,890Z M283,890 287,922 340,921 335,887Z M249,923 259,984 301,986 291,922Z M291,922 301,986 349,988 340,921Z M251,-97 296,-97 315,33 274,39Z M296,-97 400,-99 409,20 315,33Z M400,-99 416,-100 424,17 409,20Z M275,53 317,46 322,198 278,203Z M317,46 383,37 391,190 322,198Z M383,37 426,30 436,184 391,190Z M280,215 317,211 327,283 289,286Z M289,286 327,283 334,336 296,339Z M317,211 437,198 449,271 327,283Z M327,283 449,271 458,325 334,336Z M298,351 327,348 336,461 306,466Z M327,348 367,345 376,455 336,461Z M367,345 427,339 437,445 376,455Z M427,339 447,338 457,442 437,445Z M447,338 458,337 469,440 457,442Z M306,478 359,469 372,554 323,560Z M323,560 372,554 383,625 337,628Z M359,469 407,462 414,531 370,537Z M370,537 414,531 424,622 383,625Z M407,462 472,452 476,527 415,534Z M415,534 476,527 480,619 424,622Z M340,639 386,636 392,708 339,709Z M386,636 417,634 428,707 392,708Z M417,634 479,631 500,705 428,707Z M338,720 352,719 357,796 343,796Z M343,796 357,796 362,872 348,873Z M352,719 382,719 387,799 357,801Z M357,801 387,799 392,870 362,872Z M382,719 503,716 509,788 387,793Z M387,793 509,788 515,863 392,870Z M350,884 452,878 463,972 364,989Z M452,878 473,877 483,969 463,972Z M473,877 490,876 499,966 483,969Z M490,876 515,875 523,962 499,966Z M435,-49 463,-50 469,15 439,16Z M463,-49 516,-52 525,14 469,15Z M516,-51 565,-54 578,13 525,14Z M439,29 441,61 580,56 579,26Z M441,61 443,80 581,73 580,56Z M443,80 450,183 584,169 581,73Z M452,197 479,194 487,248 461,252Z M461,252 487,248 497,319 472,323Z M479,194 524,189 532,249 488,254Z M488,254 532,249 539,313 497,319Z M524,189 557,186 563,248 532,252Z M532,252 563,248 569,308 539,313Z M557,186 584,184 590,247 564,250Z M564,250 590,247 595,304 569,308Z M474,336 509,331 520,435 485,437Z M509,331 524,328 535,434 520,435Z M524,328 559,323 570,431 535,434Z M559,323 596,317 607,429 570,431Z M485,451 488,510 547,506 541,448Z M541,448 547,506 620,500 610,443Z M488,510 492,595 568,587 559,505Z M559,505 568,587 635,581 620,500Z M492,595 493,617 559,611 556,589Z M556,589 559,611 639,603 635,581Z M517,715 522,774 579,765 572,708Z M572,708 579,765 649,754 641,699Z M522,774 527,835 582,824 576,766Z M576,766 582,824 657,810 649,754Z M527,835 529,861 596,848 593,822Z M593,822 596,848 661,834 657,810Z M532,874 543,871 547,915 536,916Z M536,916 547,915 551,959 540,959Z M543,871 613,857 616,902 547,910Z M547,910 616,902 621,958 551,959Z M613,857 662,847 666,898 617,904Z M617,904 666,898 671,957 621,958Z M581,-43 585,-19 633,-27 628,-51Z M628,-51 633,-27 679,-34 674,-59Z M585,-19 587,-10 635,-17 634,-27Z M634,-27 635,-17 681,-24 679,-34Z M587,-10 590,10 634,4 631,-16Z M631,-16 634,4 684,-3 681,-24Z M591,27 593,87 633,81 632,21Z M632,21 633,81 687,73 686,12Z M593,87 594,120 643,113 642,80Z M642,80 643,113 688,107 687,73Z M594,120 596,168 642,162 641,113Z M641,113 642,162 688,156 688,107Z M597,183 602,238 648,235 643,178Z M643,178 648,235 695,233 689,172Z M602,238 605,276 647,276 643,236Z M643,236 647,276 700,275 695,233Z M605,276 608,302 650,303 647,276Z M647,276 650,303 703,304 700,275Z M610,317 615,365 667,362 660,318Z M660,318 667,362 712,359 703,319Z M615,365 617,387 671,381 668,362Z M668,362 671,381 716,376 712,359Z M617,387 621,427 673,418 667,381Z M667,381 673,418 724,408 716,376Z M654,614 667,613 667,682 654,684Z M667,613 744,607 748,669 667,682Z M654,698 657,724 754,710 752,682Z M657,724 669,807 762,797 754,710Z M669,807 673,832 765,823 762,797Z M675,848 683,945 729,941 724,843Z M724,843 729,941 767,937 765,838Z M731,941 732,950 768,946 767,937Z M674,-134 728,-141 749,-12 697,-4Z M728,-141 769,-146 789,-18 749,-12Z M769,-146 804,-150 823,-24 789,-18Z M804,-150 823,-152 841,-27 823,-24Z M699,10 699,25 844,2 843,-14Z M699,25 701,156 856,140 844,2Z M702,169 743,165 752,237 710,243Z M710,243 752,237 759,298 716,304Z M743,165 791,160 800,223 751,230Z M751,230 800,223 810,289 759,298Z M791,160 857,153 867,209 800,218Z M800,218 867,209 878,278 810,289Z M718,316 759,309 766,350 727,354Z M727,354 766,350 776,406 739,408Z M759,309 813,300 817,344 766,350Z M766,350 817,344 824,403 776,406Z M813,300 825,298 829,345 818,346Z M818,346 829,345 835,403 824,403Z M825,298 850,294 854,350 830,352Z M830,352 854,350 857,401 835,403Z M850,294 879,289 881,344 854,347Z M854,347 881,344 883,400 857,401Z M739,421 741,443 803,439 801,417Z M801,417 803,439 889,433 886,413Z M741,443 743,460 814,454 812,439Z M812,439 814,454 891,448 889,433Z M743,460 751,533 817,524 808,455Z M808,455 817,524 901,514 891,448Z M751,533 757,593 830,580 823,524Z M823,524 830,580 910,567 901,514Z M761,603 791,598 793,628 763,632Z M763,632 793,628 796,666 765,669Z M791,598 848,589 852,630 794,637Z M794,637 852,630 855,661 796,666Z M848,589 909,579 913,614 851,622Z M851,622 913,614 917,655 855,661Z M764,680 805,676 818,821 778,823Z M805,676 827,674 838,820 818,821Z M827,674 864,671 874,817 838,820Z M864,671 886,669 896,816 874,817Z M886,669 900,668 909,815 896,816Z M900,668 920,666 929,814 909,815Z M779,836 846,832 847,890 781,899Z M781,899 847,890 847,936 782,947Z M846,832 876,830 876,873 846,876Z M846,876 876,873 877,931 847,936Z M876,830 889,829 890,879 876,881Z M876,881 890,879 890,929 877,931Z M889,829 929,826 929,873 890,877Z M890,877 929,873 930,922 890,929Z M865,943 898,938 904,977 872,983Z M898,938 931,933 936,974 905,980Z M840,-124 854,-30 907,-37 894,-128Z M894,-128 907,-37 949,-42 937,-131Z M855,-14 861,52 911,46 906,-20Z M906,-20 911,46 958,41 952,-27Z M861,52 862,65 918,59 916,46Z M916,46 918,59 959,55 958,41Z M862,65 865,105 909,101 906,61Z M906,61 909,101 962,96 959,55Z M865,105 868,137 922,133 920,100Z M920,100 922,133 965,129 962,96Z M893,290 896,370 946,365 939,289Z M939,289 946,365 986,362 975,289Z M896,370 897,397 941,392 939,366Z M939,366 941,392 989,387 986,362Z M898,413 913,508 1006,504 993,403Z M913,508 921,564 1014,563 1006,504Z M925,579 998,578 1002,646 933,652Z M998,578 1012,578 1015,645 1002,646Z M932,666 935,711 981,707 977,663Z M977,663 981,707 1023,703 1018,659Z M935,711 937,749 976,745 973,708Z M973,708 976,745 1027,740 1023,703Z M937,749 939,772 990,766 988,744Z M988,744 990,766 1030,762 1027,740Z M939,772 941,812 982,807 979,767Z M979,767 982,807 1034,801 1030,762Z M947,932 982,928 985,961 951,963Z M982,928 1048,921 1050,956 985,961Z M964,-29 967,12 1100,-3 1095,-42Z M967,12 969,38 1104,23 1100,-3Z M969,38 976,129 1116,111 1104,23Z M979,143 1048,134 1053,195 983,206Z M1048,134 1064,132 1068,193 1053,195Z M1053,195 1068,193 1073,257 1057,260Z M1064,132 1097,127 1101,194 1069,200Z M1097,127 1117,125 1121,183 1101,186Z M1101,186 1121,183 1126,246 1105,250Z M989,285 1002,283 1017,386 1004,387Z M1002,283 1019,280 1035,384 1017,386Z M1019,280 1109,263 1127,377 1035,384Z M1109,263 1128,259 1147,376 1127,377Z M1004,400 1008,433 1081,426 1077,394Z M1077,394 1081,426 1153,418 1150,389Z M1008,433 1015,480 1083,471 1077,426Z M1015,480 1020,524 1100,511 1094,469Z M1094,469 1100,511 1164,500 1159,461Z M1020,524 1025,563 1092,550 1087,513Z M1087,513 1092,550 1169,535 1164,500Z M1029,574 1044,571 1046,643 1031,645Z M1044,571 1059,569 1061,642 1046,643Z M1059,569 1099,561 1102,638 1061,642Z M1099,561 1127,555 1131,635 1102,638Z M1127,555 1169,547 1174,631 1131,635Z M1030,657 1132,646 1142,796 1046,802Z M1132,646 1145,645 1154,795 1142,796Z M1145,645 1177,642 1183,793 1154,795Z M1049,814 1060,813 1075,907 1062,908Z M1060,813 1102,811 1119,901 1075,907Z M1102,811 1168,807 1190,892 1119,901Z M1168,807 1182,806 1206,890 1190,892Z M1107,-42 1109,-27 1210,-27 1209,-43Z M1109,-27 1111,-14 1211,-14 1210,-27Z M1111,-14 1122,68 1217,67 1211,-14Z M1122,68 1128,109 1220,108 1217,67Z M1137,212 1140,244 1191,238 1188,208Z M1188,208 1191,238 1239,233 1234,204Z M1141,259 1149,303 1244,291 1241,247Z M1149,303 1161,373 1251,360 1244,291Z M1162,388 1164,409 1256,397 1253,376Z M1164,409 1170,455 1262,443 1256,397Z M1170,455 1174,479 1265,468 1262,443Z M1184,547 1264,537 1272,580 1187,588Z M1187,588 1272,580 1279,620 1190,627Z M1264,537 1272,536 1281,581 1272,582Z M1272,582 1281,581 1288,619 1279,620Z M1189,642 1193,747 1301,726 1291,633Z M1193,747 1194,758 1302,736 1301,726Z M1194,758 1194,774 1303,750 1302,736Z M1194,774 1195,792 1305,766 1303,750Z M1199,805 1232,797 1246,882 1221,886Z M1232,797 1247,794 1258,880 1246,882Z M1247,794 1305,781 1303,874 1258,880Z M1223,900 1229,964 1318,953 1305,888Z M1220,-44 1225,33 1275,26 1271,-55Z M1271,-55 1275,26 1329,18 1326,-66Z M1225,33 1226,53 1285,45 1284,25Z M1284,25 1285,45 1330,39 1329,18Z M1226,53 1228,81 1275,76 1273,46Z M1273,46 1275,76 1331,70 1330,39Z M1228,81 1230,107 1284,102 1283,75Z M1283,75 1284,102 1332,98 1331,70Z M1233,122 1235,135 1278,132 1275,119Z M1275,119 1278,132 1334,127 1332,114Z M1281,132 1297,227 1350,222 1334,127Z M1253,246 1257,286 1303,281 1298,242Z M1260,325 1264,359 1325,353 1321,319Z M1321,319 1325,353 1372,348 1366,315Z M1264,374 1267,393 1376,382 1375,363Z M1268,405 1272,432 1380,420 1377,394Z M1272,432 1279,491 1385,480 1380,420Z M1279,491 1283,520 1388,510 1385,480Z M1286,534 1334,529 1346,607 1303,617Z M1334,529 1387,524 1395,596 1346,607Z M1303,632 1308,679 1405,663 1400,609Z M1308,679 1312,717 1410,706 1405,663Z M1312,717 1317,765 1416,760 1410,706Z M1319,780 1347,778 1347,831 1318,832Z M1318,832 1347,831 1347,873 1317,873Z M1347,778 1372,777 1372,822 1347,823Z M1347,823 1372,822 1372,872 1347,873Z M1372,777 1415,775 1416,828 1372,830Z M1372,830 1416,828 1417,871 1372,872Z M1318,886 1343,885 1351,920 1326,921Z M1326,921 1351,920 1361,967 1336,969Z M1343,885 1360,885 1370,928 1353,929Z M1353,929 1370,928 1378,965 1361,967Z M1360,885 1417,885 1425,920 1369,922Z M1369,922 1425,920 1435,960 1378,965Z M1337,-68 1342,63 1418,55 1409,-69Z M1409,-69 1418,55 1485,48 1473,-71Z M1342,63 1343,81 1416,72 1414,55Z M1414,55 1416,72 1487,64 1485,48Z M1343,81 1344,98 1422,88 1420,72Z M1420,72 1422,88 1488,80 1487,64Z M1346,111 1384,106 1391,156 1354,160Z M1384,106 1425,101 1432,159 1392,163Z M1392,163 1432,159 1439,216 1400,219Z M1425,101 1489,93 1493,144 1431,151Z M1431,151 1493,144 1500,212 1439,216Z M1365,234 1432,229 1440,289 1377,297Z M1377,297 1440,289 1446,338 1386,347Z M1432,229 1482,226 1487,278 1439,283Z M1439,283 1487,278 1492,331 1446,338Z M1482,226 1501,225 1505,277 1487,279Z M1487,279 1505,277 1509,328 1492,331Z M1387,361 1392,417 1518,403 1512,342Z M1392,417 1400,509 1529,507 1518,403Z M1482,520 1527,519 1544,583 1496,588Z M1411,607 1417,658 1484,653 1479,601Z M1479,601 1484,653 1553,648 1547,595Z M1417,658 1428,760 1504,757 1493,652Z M1493,652 1504,757 1563,754 1553,648Z M1433,882 1478,879 1487,917 1442,920Z M1442,920 1487,917 1495,956 1451,959Z M1478,879 1548,874 1555,912 1487,917Z M1487,917 1555,912 1563,951 1495,956Z M1548,874 1567,872 1574,914 1556,916Z M1556,916 1574,914 1581,949 1563,951Z M1487,-73 1529,-79 1543,73 1503,79Z M1529,-79 1577,-86 1590,66 1543,73Z M1577,-86 1618,-91 1630,61 1590,66Z M1618,-91 1683,-100 1694,51 1630,61Z M1505,90 1575,80 1585,202 1515,211Z M1575,80 1629,72 1639,195 1585,202Z M1629,72 1652,69 1661,192 1639,195Z M1517,221 1577,214 1589,321 1525,328Z M1577,214 1596,211 1610,319 1589,321Z M1596,211 1637,206 1655,314 1610,319Z M1637,206 1705,197 1727,307 1655,314Z M1545,516 1630,502 1640,542 1554,550Z M1554,550 1640,542 1649,579 1562,583Z M1630,502 1655,498 1666,544 1641,546Z M1561,592 1585,591 1600,750 1577,754Z M1585,591 1603,590 1618,747 1600,750Z M1603,590 1688,587 1701,734 1618,747Z M1579,764 1604,760 1606,812 1581,816Z M1581,816 1606,812 1607,857 1583,861Z M1604,760 1717,742 1718,786 1605,804Z M1605,804 1718,786 1720,840 1607,857Z M1584,869 1600,867 1614,946 1598,948Z M1600,867 1703,851 1716,932 1614,946Z"/>
+<path class="m-green" d="M1077,426 1083,471 1159,461 1153,418Z M1069,200 1101,194 1105,250 1073,257Z M1235,135 1252,231 1297,227 1281,132Z M1267,393 1268,405 1377,394 1376,382Z M983,206 1053,195 1057,260 987,273Z M1298,242 1303,281 1359,276 1352,237Z M1257,286 1260,325 1317,320 1312,281Z M1354,160 1391,156 1400,219 1364,222Z M1171,124 1181,208 1234,204 1220,124Z"/>
+<path class="m-orange" d="M1403,521 1482,520 1496,588 1412,595Z M1174,479 1181,532 1272,521 1265,468Z M1312,281 1317,320 1366,315 1359,276Z M1130,125 1137,212 1181,208 1171,124Z"/>
+  </svg>
+  <div class="wrap">
+    <div class="kop-peta">
+      <img class="logo" src="logo-full.png" alt="DSH Cipta Mandiri" width="900" height="699">
+      <h1>Perangkat lunak pertanahan yang kami bangun sendiri.</h1>
+      <p class="ringkas">Mesin koreksi GNSS, aplikasi survei lapangan, dan WebGIS pajak daerah untuk Kementerian ATR/BPN dan pemerintah daerah. Dari mesin pengolahan sampai antarmuka, semuanya ditulis di sini.</p>
+      <div class="tombol">
+        <a class="btn utama" href="#produk">Lihat produk</a>
+        <a class="btn garis" href="#kontak">Hubungi kami</a>
+      </div>
+      <ul class="produk-daftar" aria-label="Produk">
+        <li><b>COSMO</b> jaringan CORS</li>
+        <li><b>SiPETIK</b> survei tematik</li>
+        <li><b>Peta Pajak</b> NIB dan NOP</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="bagian" id="produk">
+  <div class="wrap">
+    <h2>Tiga produk untuk tiga pekerjaan pertanahan yang berbeda.</h2>
+    <p class="pengantar">Masing-masing lahir dari kebutuhan nyata di Kementerian ATR/BPN atau pemerintah daerah, dikembangkan bersama unit yang memakainya, dan sudah dipakai dalam pekerjaan sebenarnya.</p>
+
+    <article class="produk" id="cosmo">
+      <div>
+        <p class="kicker">CORS Service Monitoring and Observation</p>
+        <h3>COSMO</h3>
+        <p class="uraian">NTRIP caster dan pengelola jaringan stasiun referensi (CORS) yang ditulis dalam Rust. COSMO menerima aliran RTCM dari stasiun Jaringan Referensi Satelit Pertanahan (JRSP) dan relai Ina-CORS BIG, mengolahnya dengan mesin pengolahan GNSS milik sendiri, dan menyalurkan koreksi ke rover juru ukur. Dirancang sebagai pengganti Leica Spider, supaya jaringan CORS dikendalikan sepenuhnya oleh pemiliknya.</p>
+        <ul>
+          <li>Mountpoint statis per stasiun dan mountpoint dinamis NEAREST: rover yang bergerak berpindah stasiun tanpa putus koneksi. Koreksi jaringan VRS, i-MAX, dan MAX sedang dalam validasi.</li>
+          <li>Mesin pengolahan sendiri: Extended Kalman Filter multikonstelasi (GPS, GLONASS, Galileo, BeiDou) dengan kontrol integritas yang menahan koreksi bila ragu, dirancang untuk ionosfer khatulistiwa.</li>
+          <li>Membaca RTCM 3 lama (1004/1012) maupun MSM4 sampai MSM7, sehingga receiver lama dan baru bekerja dalam satu jaringan.</li>
+          <li>Portal pemantauan: status tiap stasiun, ketersediaan 24 jam, skyplot dan multipath, arsip RTCM dan RINEX harian, serta layanan post-processing.</li>
+        </ul>
+        <p class="bukti">Dikembangkan bersama Kementerian ATR/BPN, Direktorat Jenderal Survei dan Pemetaan Pertanahan dan Ruang, Direktorat Pengukuran dan Pemetaan Dasar Pertanahan dan Ruang. Berjalan di <a href="https://cosmo.djsppr.com">cosmo.djsppr.com</a>.</p>
+      </div>
+      <figure class="plat">
+        <svg viewBox="0 0 440 400" role="img" aria-labelledby="cs-t">
+          <title id="cs-t">Alur data COSMO: dari stasiun CORS ke rover dan portal</title>
+          <g font-family="Barlow,system-ui,sans-serif" font-size="11" fill="currentColor" text-anchor="middle">
+            <g fill="none" stroke="currentColor" stroke-width="1.4">
+              <rect x="12" y="14" width="128" height="38" rx="3"/>
+              <rect x="156" y="14" width="128" height="38" rx="3"/>
+              <rect x="300" y="14" width="128" height="38" rx="3"/>
+            </g>
+            <text x="76" y="30" font-weight="600">Stasiun CORS JRSP</text><text x="76" y="44" fill-opacity=".75">Kantor Pertanahan</text>
+            <text x="220" y="30" font-weight="600">Ina-CORS BIG</text><text x="220" y="44" fill-opacity=".75">diteruskan ke COSMO</text>
+            <text x="364" y="30" font-weight="600">IGS RTS, CDDIS, GFS</text><text x="364" y="44" fill-opacity=".75">orbit, jam, bias, cuaca</text>
+          </g>
+          <g stroke="currentColor" stroke-width="1.4" fill="currentColor">
+            <path d="M76 52v30M220 52v30M364 52v30" fill="none"/>
+            <path d="M71 80l5 8 5-8zM215 80l5 8 5-8zM359 80l5 8 5-8z"/>
+          </g>
+          <text x="148" y="72" font-family="Barlow,system-ui,sans-serif" font-size="10.5" fill="currentColor" fill-opacity=".75">RTCM 3</text>
+          <rect x="12" y="90" width="416" height="212" rx="4" fill="#F26B21" fill-opacity=".07" stroke="currentColor" stroke-width="1.6"/>
+          <g fill="currentColor">
+            <text x="24" y="110" font-family="Barlow Semi Condensed,Barlow,system-ui,sans-serif" font-size="16" font-weight="700">COSMO</text>
+            <text x="416" y="110" font-size="10.5" text-anchor="end" font-family="Barlow,system-ui,sans-serif" fill-opacity=".8">mesin Rust, lebih dari 70.000 baris</text>
+          </g>
+          <g font-family="Barlow,system-ui,sans-serif" font-size="11" fill="currentColor">
+            <g fill="none" stroke="currentColor" stroke-width="1" stroke-opacity=".55">
+              <rect x="24" y="120" width="392" height="26" rx="2"/>
+              <rect x="24" y="156" width="392" height="26" rx="2"/>
+              <rect x="24" y="192" width="392" height="26" rx="2"/>
+              <rect x="24" y="228" width="392" height="26" rx="2"/>
+            </g>
+            <text x="34" y="137"><tspan font-weight="600">Dekoder RTCM 3</tspan> 1004/1012 lama, MSM4 sampai MSM7, pesan SSR</text>
+            <text x="34" y="173"><tspan font-weight="600">Mesin observasi</tspan> orbit dan jam, antena, troposfer, ionosfer</text>
+            <text x="34" y="209"><tspan font-weight="600">Filter Kalman UDUC</tspan> per stasiun, ambiguitas MW lalu LAMBDA</text>
+            <text x="34" y="245"><tspan font-weight="600">Filter jaringan</tspan> gabungan per klaster, produk koreksi</text>
+            <g fill="currentColor" fill-opacity=".6"><path d="M216 148l4 6 4-6zM216 184l4 6 4-6zM216 220l4 6 4-6z"/></g>
+            <text x="34" y="283" font-size="10.5" fill-opacity=".85">Caster NTRIP port 2001</text>
+            <text x="180" y="283" font-size="10.5" fill-opacity=".85">Arsip RTCM dan RINEX harian</text>
+            <text x="304" y="283" font-size="10.5" fill-opacity=".85">Telemetri 1 Hz ke TimescaleDB</text>
+          </g>
+          <g stroke-width="1.6" fill="none">
+            <path d="M110 302v34" stroke="#F26B21"/>
+            <path d="M330 302v34" stroke="currentColor"/>
+          </g>
+          <path d="M105 334l5 8 5-8z" fill="#F26B21"/><path d="M325 334l5 8 5-8z" fill="currentColor"/>
+          <g font-family="Barlow,system-ui,sans-serif" font-size="10.5" fill="currentColor">
+            <text x="118" y="322" fill="#F26B21" font-weight="600">koreksi NEAREST</text>
+            <text x="338" y="322" fill-opacity=".8">telemetri, arsip, API</text>
+          </g>
+          <g font-family="Barlow,system-ui,sans-serif" font-size="11" fill="currentColor" text-anchor="middle">
+            <g fill="none" stroke="currentColor" stroke-width="1.4">
+              <rect x="12" y="344" width="196" height="40" rx="3"/>
+              <rect x="232" y="344" width="196" height="40" rx="3"/>
+            </g>
+            <text x="110" y="361" font-weight="600">Rover juru ukur di lapangan</text>
+            <text x="110" y="376" fill-opacity=".75">VRS, i-MAX, MAX setelah validasi</text>
+            <text x="330" y="361" font-weight="600">Portal cosmo.djsppr.com</text>
+            <text x="330" y="376" fill-opacity=".75">pemantauan, unduh RINEX, post-processing</text>
+          </g>
+        </svg>
+        <figcaption class="ket">Satu proses Rust menerima RTCM dari stasiun, menghitung koreksi, menyalurkannya lewat caster NTRIP, dan mengarsipkan semuanya untuk portal.</figcaption>
+      </figure>
+    
+      <div class="susunan">
+        <div><h4>Dekoder RTCM 3</h4><p>Membaca pesan 1004/1012 dari receiver lama dan MSM4 sampai MSM7 untuk GPS, GLONASS, Galileo, BeiDou, dan QZSS, termasuk pesan SSR. Setiap frame diperiksa CRC-24Q dan dinormalkan menjadi satu bentuk observasi.</p></div>
+        <div><h4>Mesin observasi</h4><p>Fisika per satelit: orbit dan jam, koreksi antena ANTEX, phase wind-up, troposfer Saastamoinen dan VMF3/GPT3, ionosfer. Produk real-time IGS, bias CDDIS, dan cuaca GFS diambil otomatis di latar belakang.</p></div>
+        <div><h4>Filter Kalman UDUC per stasiun</h4><p>State jam receiver, troposfer, posisi, bias antarsistem, ambiguitas per frekuensi, dan ionosfer miring per satelit. Ambiguitas diselesaikan dua tahap, Melbourne-Wübbena lalu LAMBDA, dengan gerbang integritas yang hanya menahan, tidak pernah memaksa.</p></div>
+        <div><h4>Filter jaringan dan produk koreksi</h4><p>Filter gabungan per klaster stasiun, ditulis sendiri, sekelas Leica Spider dan Geo++ GNSMART. Dari sini lahir NEAREST yang sudah beroperasi, serta VRS, i-MAX, dan MAX yang sedang divalidasi.</p></div>
+        <div><h4>Caster NTRIP</h4><p>Mountpoint statis per stasiun dan dinamis NEAREST. Posisi NMEA rover menentukan stasiun sehat terdekat, dan pindah stasiun berlangsung tanpa memutus koneksi TCP rover.</p></div>
+        <div><h4>Arsip dan telemetri</h4><p>RTCM mentah per stasiun per hari, RINEX 3.04 harian otomatis, dan telemetri 1 Hz ke TimescaleDB: DOP, SNR, multipath, sintilasi ionosfer, pergeseran posisi. Receiver stasiun tidak perlu FTP.</p></div>
+        <div><h4>API dan portal</h4><p>API Rust (axum) dan portal SvelteKit berbahasa Indonesia: dasbor stasiun, peta jaringan dengan bidang NIB, sesi rover, unduh RINEX, post-processing, analitik cakupan, dan manajemen pengguna per Kantor Pertanahan.</p></div>
+      </div>
+    </article>
+
+    <article class="produk" id="sipetik">
+      <div>
+        <p class="kicker">Sistem Pemetaan Tematik</p>
+        <h3>SiPETIK</h3>
+        <p class="uraian">Sistem akuisisi data survei tematik pertanahan, penerus SiPetik 5.0, untuk tema seperti IP4T, tanah wakaf, MBR, dan hortikultura. Surveyor mendigitasi bidang, mengisi formulir, dan memotret dari aplikasi web progresif yang tetap bekerja tanpa sinyal. Team Leader memverifikasi, pimpinan memantau progres, dan hasilnya siap diserahkan ke Geoportal IGT-PR.</p>
+        <ul>
+          <li>Aplikasi lapangan berbasis PWA yang bekerja luring, dengan citra Peta Dasar ATR/BPN yang diunduh ke ponsel, dan menyinkronkan data begitu sinyal kembali.</li>
+          <li>Verifikasi dua tahap oleh Team Leader dan Penanggung Jawab Data, kendali mutu topologi di dalam aplikasi, dan pemantauan progres langsung untuk pimpinan.</li>
+          <li>Tata usaha surat tugas, tim, dan berkas kerja. Akun yang dibuat untuk satu surat tugas berakhir sendiri bersama surat tugasnya.</li>
+          <li>Formulir mengikuti Permen ATR/KaBPN No. 1 Tahun 2025. Ekspor SHP, GeoJSON, GeoParquet, PMTiles, GeoPackage, dan FileGDB lengkap dengan metadata, ditambah layanan WFS/WMS dan pengaya QGIS.</li>
+          <li>Masuk tunggal OpenID Connect untuk Pusdatin ATR/BPN dan API terdokumentasi OpenAPI untuk klien Sentuh Tanahku.</li>
+        </ul>
+        <p class="bukti">Dikembangkan bersama Kementerian ATR/BPN, Direktorat Jenderal Survei dan Pemetaan Pertanahan dan Ruang, Direktorat Survei dan Pemetaan Tematik. Berjalan di <a href="https://sipetik.dshcm.id">sipetik.dshcm.id</a> dan sudah dipakai untuk survei hortikultura di Kecamatan Ciwidey, Kabupaten Bandung.</p>
+      </div>
+      <figure class="plat">
+        <svg viewBox="0 0 400 300" role="img" aria-labelledby="sp-t">
+          <title id="sp-t">Dari digitasi di ponsel sampai berkas siap ekspor</title>
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="28" y="18" width="150" height="264" rx="18"/>
+            <rect x="40" y="38" width="126" height="224" rx="6" stroke-opacity=".45"/>
+          </g>
+          <g fill="none" stroke="currentColor" stroke-width="1" stroke-opacity=".3">
+            <path d="M40 70H166M40 110H166M40 150H166M40 190H166M72 38V262M114 38V262"/>
+          </g>
+          <path d="M58 92 136 80 150 150 112 176 56 160Z" fill="#F26B21" fill-opacity=".9" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <g fill="#F4F6F3" stroke="currentColor" stroke-width="1.5">
+            <circle cx="58" cy="92" r="4"/><circle cx="136" cy="80" r="4"/><circle cx="150" cy="150" r="4"/><circle cx="112" cy="176" r="4"/><circle cx="56" cy="160" r="4"/>
+          </g>
+          <g font-family="Barlow,system-ui,sans-serif" font-size="11" fill="currentColor">
+            <rect x="46" y="200" width="114" height="14" rx="2" fill="none" stroke="currentColor" stroke-opacity=".5"/>
+            <text x="52" y="211" fill-opacity=".8">Komoditas: cabai</text>
+            <rect x="46" y="222" width="114" height="14" rx="2" fill="none" stroke="currentColor" stroke-opacity=".5"/>
+            <text x="52" y="233" fill-opacity=".8">Foto: 3 dari 3</text>
+            <rect x="46" y="244" width="114" height="12" rx="2" fill="#1E6E4A" fill-opacity=".9"/>
+            <text x="52" y="254" fill="#F4F6F3">tersimpan luring</text>
+          </g>
+          <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 5">
+            <path d="M186 150H262"/>
+          </g>
+          <path d="M262 144 272 150 262 156Z" fill="currentColor"/>
+          <text x="224" y="138" font-family="Barlow,system-ui,sans-serif" font-size="11" fill="currentColor" fill-opacity=".75" text-anchor="middle">sinkron saat ada sinyal</text>
+          <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+            <path d="M292 92h58l26 26v130h-84z"/>
+            <path d="M350 92v26h26"/>
+          </g>
+          <g stroke="currentColor" stroke-width="1" stroke-opacity=".4"><path d="M306 150h56M306 166h56M306 182h40"/></g>
+          <path d="M306 200 318 212 340 190" fill="none" stroke="#1E6E4A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <g font-family="Barlow,system-ui,sans-serif" font-size="12" fill="currentColor" text-anchor="middle">
+            <text x="334" y="270">berkas terverifikasi</text>
+            <text x="334" y="285" font-size="11" fill-opacity=".7">siap ekspor ke</text>
+            <text x="334" y="298" font-size="11" fill-opacity=".7">Geoportal IGT-PR</text>
+          </g>
+        </svg>
+        <figcaption class="ket">Digitasi dan formulir diisi di lapangan tanpa sinyal, diverifikasi di kantor, lalu diekspor sebagai berkas.</figcaption>
+      </figure>
+    </article>
+
+    <article class="produk" id="petapajak">
+      <div>
+        <p class="kicker">WebGIS integrasi NIB dan NOP untuk pajak daerah</p>
+        <h3>Peta Pajak</h3>
+        <p class="uraian">Menyatukan bidang tanah ATR/BPN (NIB) dengan objek pajak daerah (NOP) di satu peta. Bapenda dan Kantor Pertanahan melihat bidang yang sama, nilai ketetapan dan tunggakannya, serta bangunan di atasnya dalam 3D. Dipasang per daerah dengan nama dan identitas masing-masing.</p>
+        <ul>
+          <li>Pencocokan NIB dan NOP secara spasial dengan ambang tumpang tindih yang dikalibrasi per daerah. Tetap berjalan di daerah yang data PBB-nya masih berupa tabel tanpa peta.</li>
+          <li>Peta yang ringan dan responsif untuk ratusan ribu bidang: vector tile MVT dari PostGIS, analitik DuckDB di atas GeoParquet, dirender MapLibre, dengan bangunan LOD1 dalam 3D.</li>
+          <li>Kaidah empat mata: setiap perubahan diajukan satu orang dan diputuskan orang lain, dengan jejak audit yang mencatat siapa mengubah dan membaca apa.</li>
+          <li>Keamanan sejak rancangan: kredensial di basis data terpisah, autentikasi dua faktor wajib, identitas wajib pajak terenkripsi dan hanya terbuka untuk peran pemerintah daerah.</li>
+          <li>Integrasi SPLP dengan ATR/BPN, OGC API Features, pengaya QGIS, dan ekspor dalam format terbuka.</li>
+        </ul>
+        <p class="bukti">Diinisiasi bersama Kementerian ATR/BPN, Kementerian Dalam Negeri, dan KPK. Telah digunakan di 60 kabupaten/kota, dan terus bertambah.</p>
+      </div>
+      <figure class="plat">
+        <svg viewBox="0 0 400 300" role="img" aria-labelledby="pp-t">
+          <title id="pp-t">Bidang NIB dan objek pajak NOP yang saling tumpang tindih</title>
+          <defs>
+            <clipPath id="nib-clip"><path d="M70 70 230 50 250 170 100 200Z"/></clipPath>
+            <pattern id="arsir" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <rect width="7" height="7" fill="#F26B21" fill-opacity=".35"/><rect width="2.2" height="7" fill="#F26B21"/>
+            </pattern>
+          </defs>
+          <g clip-path="url(#nib-clip)">
+            <path d="M160 110 330 90 340 230 180 250Z" fill="url(#arsir)"/>
+          </g>
+          <path d="M70 70 230 50 250 170 100 200Z" fill="none" stroke="#1E6E4A" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M160 110 330 90 340 230 180 250Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <g font-family="Barlow,system-ui,sans-serif" font-size="12" fill="currentColor">
+            <text x="70" y="58" fill="#1E6E4A" font-weight="600">Bidang NIB (ATR/BPN)</text>
+            <text x="222" y="268" font-weight="600">Objek pajak NOP (Bapenda)</text>
+            <path d="M236 146 318 70" stroke="currentColor" stroke-width="1"/>
+            <text x="392" y="50" font-size="11.5" text-anchor="end">tumpang tindih di atas ambang</text>
+            <text x="392" y="64" font-size="11.5" text-anchor="end" fill-opacity=".75">tercatat sebagai satu bidang</text>
+          </g>
+        </svg>
+        <figcaption class="ket">Satu bidang di dua register: NIB dari Kantor Pertanahan, NOP dari Bapenda, dihubungkan lewat tumpang tindih geometri.</figcaption>
+      </figure>
+    </article>
+  </div>
+</section>
+
+<section class="bagian" id="daerah">
+  <div class="wrap">
+    <h2>Sudah berjalan di pemerintah daerah.</h2>
+    <p class="pengantar">Peta Pajak dipasang di server tiap daerah dengan nama dan identitas setempat. Beberapa di antaranya dapat dibuka langsung.</p>
+    <ul class="daerah">
+      <li><span class="nm">Kota Bekasi</span><a href="https://bapenda.bekasikota.go.id/">bapenda.bekasikota.go.id</a></li>
+      <li><span class="nm">Kabupaten Bekasi</span><a href="https://petapajak-bapenda.bekasikab.go.id/">petapajak-bapenda.bekasikab.go.id</a></li>
+      <li><span class="nm">Kota Bandar Lampung</span><a href="https://petapajak.bandarlampungkota.go.id/">petapajak.bandarlampungkota.go.id</a></li>
+      <li><span class="nm">Kota Metro</span><a href="https://petapajak.metrokota.go.id/">petapajak.metrokota.go.id</a></li>
+      <li><span class="nm">Kabupaten Lampung Selatan</span><a href="https://sigerhandak.lampungselatankab.go.id/">sigerhandak.lampungselatankab.go.id</a></li>
+      <li><span class="nm">Kabupaten Lampung Utara</span><a href="https://petapajaksikep.lampungutarakab.go.id/">petapajaksikep.lampungutarakab.go.id</a></li>
+      <li><span class="nm">Kota Kendari</span><a href="https://petapajak.kendarikota.go.id/">petapajak.kendarikota.go.id</a></li>
+      <li><span class="nm">Kabupaten Buol</span><a href="https://petapajak.buolkab.go.id/">petapajak.buolkab.go.id</a></li>
+    </ul>
+    <p class="daerah-catatan">Dan puluhan kabupaten/kota lain. Di kementerian, COSMO berjalan di <a href="https://cosmo.djsppr.com">cosmo.djsppr.com</a> dan SiPETIK di <a href="https://sipetik.dshcm.id">sipetik.dshcm.id</a>.</p>
+    <p class="daerah-catatan">Di luar tiga produk itu, kami juga membangun alat kerja yang lebih kecil untuk Kantor Pertanahan: pemantauan rover langsung di Kabupaten Gowa dan pemantauan berkas pengukuran di Kota Semarang.</p>
+  </div>
+</section>
+
+<section class="bagian" id="cara">
+  <div class="wrap">
+    <h2>Cara kami bekerja.</h2>
+    <div class="cara">
+      <div>
+        <h3>Dibangun sendiri, sampai ke inti</h3>
+        <p>Mesin pengolahan GNSS, NTRIP caster, pencocokan NIB dan NOP: komponen inti kami tulis sendiri, bukan dibeli lalu dibungkus. Kalau ada yang perlu diubah, kami ubah sendiri, hari itu juga.</p>
+      </div>
+      <div>
+        <h3>Berdiri di atas perangkat lunak terbuka</h3>
+        <p>Rust, PostgreSQL dan PostGIS, DuckDB, MapLibre, SvelteKit. Tidak ada lisensi per kursi, dan semuanya bisa dipasang di server milik instansi, tanpa bergantung pada layanan asing untuk hal yang bisa dijalankan sendiri.</p>
+      </div>
+      <div>
+        <h3>Aman sejak rancangan</h3>
+        <p>Kredensial di basis data terpisah, autentikasi dua faktor wajib, data pribadi terenkripsi, dan rancangan yang sejak awal memperhitungkan UU 27/2022 tentang Pelindungan Data Pribadi.</p>
+      </div>
+      <div>
+        <h3>Memakai AI, dan akan membangunnya</h3>
+        <p>AI sudah menjadi bagian dari cara kami mengembangkan perangkat lunak setiap hari. Langkah berikutnya adalah membangun model AI kami sendiri untuk kebutuhan pertanahan Indonesia, dengan prinsip yang sama: mandiri.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bagian tentang" id="tentang">
+  <div class="wrap isi">
+    <div>
+      <h2>Tentang DSH Cipta Mandiri.</h2>
+      <p class="besar">DSH berasal dari nama Dony Setiawan dan Samuel Hiero, yang sudah bekerja bersama lebih dari tiga tahun sebelum perusahaan ini berdiri. Cipta Mandiri adalah cara kami bekerja: menciptakan sendiri apa yang kami butuhkan, alih-alih bergantung pada produk orang lain yang tidak bisa kami ubah.</p>
+      <p class="besar">Kami bergerak sejalan dengan Kementerian ATR/BPN. Kami percaya kementerian ini bisa lebih modern dan lebih cepat, dan bahwa perangkat lunaknya sebaiknya dibangun di dalam negeri oleh orang yang memahami pekerjaan pertanahan sampai ke detailnya.</p>
+    </div>
+    <ul class="pendiri" aria-label="Pendiri">
+      <li><div class="nm">Dony Setiawan</div><div class="pr">Pendiri</div></li>
+      <li><div class="nm">Samuel Hiero</div><div class="pr">Pendiri, pengembangan produk</div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="bagian kontak" id="kontak">
+  <div class="wrap">
+    <h2>Hubungi kami.</h2>
+    <p class="pengantar">Untuk kerja sama dengan kementerian, pemerintah daerah, atau mitra teknologi.</p>
+    <div class="baris">
+      <a href="tel:+62822797678">+62 822 797 678</a>
+      <a href="https://wa.me/62822797678">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>DSH Cipta Mandiri</span>
+    <span>Perangkat lunak pertanahan, dibangun di Indonesia.</span>
+  </div>
+</footer>
+
+</body>
 </html>
